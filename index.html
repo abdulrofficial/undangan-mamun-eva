@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b98b68">
+
+<title>The Wedding of Ma’mun Solehudin & Eva Nuraeni</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4e7d8;
+    color:#5b4030;
+    overflow-x:hidden;
+}
+
+section{
+    padding:75px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* =========================
+   OPENING
+========================= */
+
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(70,40,25,.55),rgba(70,40,25,.65)),
+    url('fotosampul.jpg') center/cover no-repeat;
+}
+
+.opening-box{
+    padding:35px 25px;
+    max-width:500px;
+}
+
+.opening-small{
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+.opening-box h1{
+    font-size:50px;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.opening-box p{
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.open-btn{
+    border:none;
+    background:#ead1b8;
+    color:#5a3d2d;
+    padding:15px 30px;
+    border-radius:40px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.open-btn:hover{
+    transform:scale(1.04);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(73,45,31,.38),rgba(73,45,31,.62)),
+    url('fotosampul.jpg') center/cover no-repeat;
+}
+
+.hero-content{
+    width:100%;
+    max-width:700px;
+}
+
+.hero .small{
+    letter-spacing:4px;
+    font-size:12px;
+}
+
+.hero h1{
+    font-size:65px;
+    line-height:.95;
+    margin:20px 0;
+}
+
+.hero .date{
+    font-size:16px;
+    letter-spacing:2px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title span{
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-top:5px;
+}
+
+.divider{
+    width:60px;
+    height:2px;
+    background:#a87551;
+    margin:15px auto;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+    background:#ead7c4;
+    text-align:center;
+}
+
+.quote p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    font-size:15px;
+    font-style:italic;
+}
+
+.arabic-note{
+    margin-top:25px;
+    font-size:13px;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple{
+    background:#f7ede3;
+}
+
+.couple-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.person{
+    text-align:center;
+    background:#fffaf5;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(100,70,50,.1);
+}
+
+.person img{
+    width:100%;
+    aspect-ratio:1/1.15;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.person h3{
+    font-size:30px;
+    margin-top:15px;
+}
+
+.person .nickname{
+    font-size:13px;
+    color:#a87551;
+    margin:5px 0 15px;
+}
+
+.parents{
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* =========================
+   EVENT
+========================= */
+
+.event{
+    background:#efe0d0;
+}
+
+.event-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.event-card{
+    background:#fffaf5;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(100,70,50,.1);
+}
+
+.event-icon{
+    font-size:30px;
+}
+
+.event-card h3{
+    font-size:32px;
+    margin:10px 0;
+}
+
+.event-card p{
+    font-size:13px;
+    line-height:1.9;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:11px 20px;
+    border-radius:30px;
+    background:#9b6b4d;
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+}
+
+/* =========================
+   LOVE STORY
+========================= */
+
+.story{
+    background:#f8eee5;
+}
+
+.story-box{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 8px 30px rgba(100,70,50,.08);
+}
+
+.story-box p{
+    line-height:2;
+    font-size:14px;
+    text-align:justify;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#ead7c4;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:20px;
+    background:#fff;
+}
+
+.gallery-item img{
+    display:block;
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+    background:#f8eee5;
+    text-align:center;
+}
+
+.rsvp-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(100,70,50,.1);
+}
+
+input,select,textarea{
+    width:100%;
+    border:1px solid #dfc8b4;
+    background:#fffaf5;
+    padding:13px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-family:inherit;
+    outline:none;
+}
+
+textarea{
+    min-height:100px;
+    resize:none;
+}
+
+.send-btn{
+    width:100%;
+    border:none;
+    background:#8f6348;
+    color:white;
+    padding:14px;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift{
+    background:#ead7c4;
+    text-align:center;
+}
+
+.bank-card{
+    max-width:500px;
+    margin:auto;
+    background:#fffaf5;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(100,70,50,.1);
+}
+
+.bank-name{
+    font-size:24px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.account{
+    font-size:25px;
+    font-weight:600;
+    letter-spacing:2px;
+    margin:12px 0;
+}
+
+.copy-btn{
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    background:#9b6b4d;
+    color:white;
+    cursor:pointer;
+}
+
+.address{
+    margin-top:25px;
+    font-size:13px;
+    line-height:1.8;
+}
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes{
+    background:#f8eee5;
+}
+
+.wish-form{
+    max-width:650px;
+    margin:auto;
+}
+
+.wish-list{
+    max-width:650px;
+    margin:30px auto 0;
+}
+
+.wish{
+    background:white;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:12px;
+}
+
+.wish strong{
+    color:#8f6348;
+}
+
+.wish p{
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:60px 20px 90px;
+    text-align:center;
+    background:#5d4030;
+    color:#f8eee5;
+}
+
+footer h2{
+    font-size:38px;
+}
+
+footer p{
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.wa{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:25px;
+    z-index:1000;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn{
+    position:fixed;
+    left:18px;
+    bottom:18px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:none;
+    background:#8f6348;
+    color:white;
+    z-index:1000;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:650px){
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .opening-box h1{
+        font-size:43px;
+    }
+
+    .couple-grid,
+    .event-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+    section{
+        padding:60px 16px;
+    }
+
+    .story-box{
+        padding:25px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     MUSIK
+========================= -->
+
+<audio id="music" loop preload="auto">
+    <source src="Gita Gutawa – Kembang Perawan Lirik Lagu - Indolirik (128k).mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     HALAMAN BUKA
+========================= -->
+
+<div id="opening">
+
+    <div class="opening-box">
+
+        <div class="opening-small">
+            THE WEDDING OF
+        </div>
+
+        <h1>
+            Ma’mun<br>
+            &<br>
+            Eva
+        </h1>
+
+        <p>
+            Kepada Yth.<br>
+            Bapak/Ibu/Saudara/i
+        </p>
+
+        <button class="open-btn" onclick="openInvitation()">
+            💌 BUKA UNDANGAN
+        </button>
+
+        <p style="font-size:11px;margin-top:18px;">
+            Tekan tombol untuk membuka undangan & memutar musik
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small">
+            THE WEDDING OF
+        </div>
+
+        <h1>
+            Ma’mun<br>&<br>Eva
+        </h1>
+
+        <div class="date">
+            SABTU, 13 MARET 2027
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="quote">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Assalamualaikum</span>
+            <h2>Dengan Memohon Ridha Allah</h2>
+            <div class="divider"></div>
+        </div>
+
+        <p>
+            Assalamualaikum Warahmatullahi Wabarakatuh
+            <br><br>
+
+            Maha suci Allah yang telah menciptakan makhluk-Nya
+            berpasang-pasangan.
+            Ya Allah semoga ridha-Mu tercurah mengiringi
+            pernikahan kami.
+        </p>
+
+        <p class="arabic-note">
+            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+            menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+            agar kamu cenderung dan merasa tenteram kepadanya,
+            dan Dia menjadikan di antaramu rasa kasih dan sayang.”
+            <br><br>
+            <b>QS. Ar-Rum: 21</b>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMPELAI
+========================= -->
+
+<section class="couple">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Couple</span>
+
+            <h2>Mempelai</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="couple-grid">
+
+            <!-- PRIA -->
+
+            <div class="person">
+
+                <img src="laki laki.jpg" alt="Ma’mun Solehudin">
+
+                <h3>Ma’mun Solehudin</h3>
+
+                <div class="nickname">
+                    Ma’mun
+                </div>
+
+                <div class="parents">
+                    Putra dari<br>
+                    <b>Gunawan & Ati Maryati</b>
+                </div>
+
+            </div>
+
+
+            <!-- WANITA -->
+
+            <div class="person">
+
+                <img src="wanita.jpg" alt="Eva Nuraeni">
+
+                <h3>Eva Nuraeni</h3>
+
+                <div class="nickname">
+                    Neng Eva
+                </div>
+
+                <div class="parents">
+                    Putri dari<br>
+                    <b>M Ramdhan & Siti Nurhayati</b>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACARA
+========================= -->
+
+<section class="event">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Save The Date</span>
+
+            <h2>Waktu & Tempat</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="event-grid">
+
+            <!-- AKAD -->
+
+            <div class="event-card">
+
+                <div class="event-icon">💍</div>
+
+                <h3>Akad Nikah</h3>
+
+                <p>
+
+                    <b>Sabtu, 13 Maret 2027</b>
+                    <br>
+
+                    Pukul 08.00 WIB
+
+                    <br><br>
+
+                    Kp. Wargaluyu RT 003 / RW 003,
+                    Desa Mekarsari,
+                    Kecamatan Pagelaran,
+                    Kabupaten Bekasi
+
+                </p>
+
+            </div>
+
+
+            <!-- RESEPSI -->
+
+            <div class="event-card">
+
+                <div class="event-icon">🥂</div>
+
+                <h3>Resepsi</h3>
+
+                <p>
+
+                    <b>Sabtu, 13 Maret 2027</b>
+                    <br>
+
+                    Pukul 09.00 WIB
+
+                    <br><br>
+
+                    Kp. Wargaluyu RT 003 / RW 003,
+                    Desa Mekarsari,
+                    Kecamatan Pagelaran,
+                    Kabupaten Cianjur
+
+                </p>
+
+                <a
+                class="map-btn"
+                href="https://maps.app.goo.gl/zBwgrAvMzom1JJzf9?g_st=ac"
+                target="_blank">
+
+                    📍 BUKA GOOGLE MAPS
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE STORY
+========================= -->
+
+<section class="story">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Journey</span>
+
+            <h2>Love Story</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="story-box">
+
+            <p>
+
+                Kisah ini dimulai sejak zaman SMA.
+
+                <br><br>
+
+                Ma’mun & Eva terpaut beda usia 2 tahun.
+                Saat itu Eva adalah adik kelasnya.
+                Di masa itu Eva memiliki pasangan dan Ma’mun juga mengetahuinya.
+
+                <br><br>
+
+                Ma’mun selalu memperhatikan Eva dari jauh.
+                Sampai pada suatu saat Ma’mun menanyakan kepada saudara Eva,
+                yang juga merupakan teman seangkatannya, apakah hubungan Eva
+                masih berlanjut atau tidak.
+
+                <br><br>
+
+                Dan ternyata masih berlanjut.
+
+                <br><br>
+
+                Eva sendiri tidak pernah mengetahui tentang perhatian Ma’mun.
+                Bahkan Eva hanya mengetahui namanya saja.
+
+                <br><br>
+
+                Singkat cerita, mereka semua telah lulus sekolah
+                dan tidak pernah berkomunikasi sedikit pun.
+
+                <br><br>
+
+                Hingga pada tahun 2023, Eva & Ma’mun dipertemukan kembali
+                di Cikarang. Mereka sama-sama bekerja di kota yang sama.
+
+                <br><br>
+
+                Saat itu Ma’mun melihat story Eva dan mulai membuka obrolan
+                melalui chat di Facebook.
+
+                <br><br>
+
+                Ketika Ma’mun mengetahui Eva sudah tidak memiliki pasangan,
+                mereka mulai dekat dan mulai saling bertemu.
+
+                <br><br>
+
+                Selama 2 tahun dekat, tidak ada status pacaran di antara mereka.
+
+                <br><br>
+
+                Hingga akhirnya pada
+                <b>26 Desember 2025</b>,
+                Ma’mun resmi melamar Eva sebagai calon istrinya.
+
+                <br><br>
+
+                Dan kini, mereka melangkah menuju satu janji suci
+                untuk membangun kehidupan bersama.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Our Memories</span>
+
+            <h2>Galeri</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <!-- FOTO GALERI BERDIRI SENDIRI -->
+
+            <div class="gallery-item">
+
+                <img
+                src="kedua mempelai.jpg"
+                alt="Kedua Mempelai">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RSVP
+========================= -->
+
+<section class="rsvp">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>RSVP</span>
+
+            <h2>Konfirmasi Kehadiran</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="rsvp-box">
+
+            <input
+            type="text"
+            id="rsvpName"
+            placeholder="Nama Anda">
+
+            <select id="rsvpStatus">
+
+                <option value="Hadir">
+                    Saya akan hadir
+                </option>
+
+                <option value="Tidak Hadir">
+                    Maaf, tidak dapat hadir
+                </option>
+
+            </select>
+
+            <textarea
+            id="rsvpMessage"
+            placeholder="Pesan untuk kedua mempelai"></textarea>
+
+            <button
+            class="send-btn"
+            onclick="sendRSVP()">
+
+                💬 KIRIM KONFIRMASI
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AMPLOP DIGITAL
+========================= -->
+
+<section class="gift">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Wedding Gift</span>
+
+            <h2>Amplop Digital</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="bank-card">
+
+            <div class="bank-name">
+                Livin' by Mandiri
+            </div>
+
+            <div class="account">
+                1560020964898
+            </div>
+
+            <p>
+                a.n. <b>EVA NURAENI</b>
+            </p>
+
+            <br>
+
+            <button
+            class="copy-btn"
+            onclick="copyRekening()">
+
+                📋 SALIN NOMOR REKENING
+
+            </button>
+
+            <div class="address">
+
+                Alamat pengiriman hadiah:
+
+                <br>
+
+                <b>
+                Kp. Wargaluyu RT 003 / RW 003,
+                Desa Mekarsari,
+                Kecamatan Pagelaran,
+                Kabupaten Cianjur
+                </b>
+
+                <br><br>
+
+                <a
+                class="map-btn"
+                href="https://maps.app.goo.gl/zBwgrAvMzom1JJzf9?g_st=ac"
+                target="_blank">
+
+                    📍 LIHAT ALAMAT
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     UCAPAN TAMU
+========================= -->
+
+<section class="wishes">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Guest Book</span>
+
+            <h2>Ucapan & Doa</h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+
+        <div class="wish-form">
+
+            <input
+            type="text"
+            id="wishName"
+            placeholder="Nama Anda">
+
+            <textarea
+            id="wishText"
+            placeholder="Tulis ucapan & doa..."></textarea>
+
+            <button
+            class="send-btn"
+            onclick="addWish()">
+
+                💌 KIRIM UCAPAN
+
+            </button>
+
+        </div>
+
+
+        <div
+        class="wish-list"
+        id="wishList">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h2>Ma’mun & Eva</h2>
+
+    <p>
+        Sabtu, 13 Maret 2027
+    </p>
+
+    <p style="margin-top:25px;">
+        Terima kasih atas doa dan kehadiran Anda.
+    </p>
+
+    <p style="margin-top:25px;">
+        Made with ❤️
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+class="wa"
+href="https://wa.me/6281320774586"
+target="_blank"
+title="WhatsApp">
+
+    ☎
+
+</a>
+
+
+<!-- =========================
+     MUSIC BUTTON
+========================= -->
+
+<button
+class="music-btn"
+id="musicBtn"
+onclick="toggleMusic()">
+
+    🔊
+
+</button>
+
+
+<script>
+
+/* =========================
+   BUKA UNDANGAN
+========================= */
+
+function openInvitation(){
+
+    const opening = document.getElementById("opening");
+    const music = document.getElementById("music");
+
+    opening.style.display = "none";
+
+    music.volume = 0.7;
+
+    music.play().then(() => {
+
+        document.getElementById("musicBtn").innerHTML = "🔊";
+
+    }).catch(() => {
+
+        document.getElementById("musicBtn").innerHTML = "🔇";
+
+    });
+
+}
+
+
+/* =========================
+   MUSIK
+========================= */
+
+function toggleMusic(){
+
+    const music = document.getElementById("music");
+    const btn = document.getElementById("musicBtn");
+
+    if(music.paused){
+
+        music.play();
+
+        btn.innerHTML = "🔊";
+
+    }else{
+
+        music.pause();
+
+        btn.innerHTML = "🔇";
+
+    }
+
+}
+
+
+/* =========================
+   COPY REKENING
+========================= */
+
+function copyRekening(){
+
+    navigator.clipboard.writeText("1560020964898");
+
+    alert("Nomor rekening berhasil disalin.");
+
+}
+
+
+/* =========================
+   RSVP WHATSAPP
+========================= */
+
+function sendRSVP(){
+
+    const name =
+    document.getElementById("rsvpName").value;
+
+    const status =
+    document.getElementById("rsvpStatus").value;
+
+    const message =
+    document.getElementById("rsvpMessage").value;
+
+    if(name.trim() === ""){
+
+        alert("Silakan masukkan nama.");
+
+        return;
+
+    }
+
+    const text =
+    "Halo Ma’mun & Eva,%0A%0A" +
+    "Nama: " + encodeURIComponent(name) +
+    "%0AStatus: " + encodeURIComponent(status) +
+    "%0APesan: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/6281320774586?text=" + text,
+        "_blank"
+    );
+
+}
+
+
+/* =========================
+   UCAPAN TAMU
+========================= */
+
+function addWish(){
+
+    const name =
+    document.getElementById("wishName").value;
+
+    const text =
+    document.getElementById("wishText").value;
+
+    if(name.trim() === "" || text.trim() === ""){
+
+        alert("Nama dan ucapan harus diisi.");
+
+        return;
+
+    }
+
+    const wishList =
+    document.getElementById("wishList");
+
+    const wish =
+    document.createElement("div");
+
+    wish.className = "wish";
+
+    wish.innerHTML =
+    "<strong>" +
+    escapeHTML(name) +
+    "</strong>" +
+    "<p>" +
+    escapeHTML(text) +
+    "</p>";
+
+    wishList.prepend(wish);
+
+    document.getElementById("wishName").value = "";
+
+    document.getElementById("wishText").value = "";
+
+}
+
+
+/* =========================
+   KEAMANAN TEKS
+========================= */
+
+function escapeHTML(text){
+
+    const div =
+    document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+</script>
+
+</body>
+</html>
