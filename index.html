@@ -4,13 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#b98b68">
+
 <title>The Wedding of Ma’mun Solehudin & Eva Nuraeni</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -18,7 +25,7 @@
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:auto;
 }
 
 body{
@@ -38,6 +45,13 @@ a{
     color:inherit;
 }
 
+button,
+input,
+textarea,
+select{
+    font-family:'Poppins',sans-serif;
+}
+
 .container{
     width:90%;
     max-width:900px;
@@ -47,6 +61,11 @@ a{
 section{
     padding:75px 0;
 }
+
+
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
 
 .section-title{
     text-align:center;
@@ -74,21 +93,34 @@ section{
     margin:15px auto;
 }
 
-/* ================= OPENING ================= */
+
+/* =====================================================
+   OPENING
+   ===================================================== */
 
 .opening{
     position:fixed;
     inset:0;
+
     background:
-        linear-gradient(rgba(45,25,15,.55),rgba(45,25,15,.65)),
+        linear-gradient(
+            rgba(45,25,15,.55),
+            rgba(45,25,15,.68)
+        ),
         url("fotosampul.jpg") center/cover;
+
     z-index:5000;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
     color:white;
-    transition:1s ease;
+
+    transition:
+        opacity 1s cubic-bezier(.22,1,.36,1),
+        visibility 1s;
 }
 
 .opening.hide{
@@ -100,7 +132,11 @@ section{
 .opening-box{
     width:90%;
     max-width:600px;
-    animation:openingFade 1.5s ease both;
+
+    animation:
+        openingFade 1.5s
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 .opening-box small{
@@ -122,14 +158,23 @@ section{
 
 .open-btn{
     border:1px solid rgba(255,255,255,.8);
+
     background:rgba(255,255,255,.12);
+
     color:white;
+
     padding:13px 28px;
+
     border-radius:30px;
+
     cursor:pointer;
-    font-family:'Poppins',sans-serif;
-    backdrop-filter:blur(5px);
-    transition:.3s;
+
+    backdrop-filter:blur(7px);
+    -webkit-backdrop-filter:blur(7px);
+
+    transition:
+        transform .4s ease,
+        background .4s ease;
 }
 
 .open-btn:hover{
@@ -138,19 +183,36 @@ section{
     transform:scale(1.05);
 }
 
-/* ================= HERO ================= */
+.open-btn:active{
+    transform:scale(.96);
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero{
     min-height:100vh;
+
     position:relative;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     color:white;
+
     background:
-        linear-gradient(rgba(55,32,20,.35),rgba(55,32,20,.62)),
-        url("fotosampul.jpg") center/cover fixed;
+        linear-gradient(
+            rgba(55,32,20,.35),
+            rgba(55,32,20,.65)
+        ),
+        url("fotosampul.jpg") center/cover;
+
+    overflow:hidden;
 }
 
 .hero-content{
@@ -160,7 +222,12 @@ section{
 .hero .small{
     letter-spacing:4px;
     font-size:13px;
-    animation:fadeUp 1s .2s both;
+
+    animation:
+        fadeUp 1.2s
+        .2s
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 .hero h1{
@@ -168,12 +235,21 @@ section{
     font-size:70px;
     line-height:.95;
     margin:20px 0;
-    animation:heroName 1.5s ease both;
+
+    animation:
+        heroName 1.6s
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 .hero p{
     font-size:15px;
-    animation:fadeUp 1s .7s both;
+
+    animation:
+        fadeUp 1.2s
+        .7s
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 .date{
@@ -182,7 +258,10 @@ section{
     letter-spacing:2px;
 }
 
-/* ================= QUOTE ================= */
+
+/* =====================================================
+   QUOTE
+   ===================================================== */
 
 .quote{
     text-align:center;
@@ -191,10 +270,15 @@ section{
 
 .quote-text{
     max-width:700px;
+
     margin:auto;
+
     font-family:'Cormorant Garamond',serif;
+
     font-size:26px;
+
     line-height:1.6;
+
     font-style:italic;
 }
 
@@ -203,7 +287,10 @@ section{
     font-size:13px;
 }
 
-/* ================= COUPLE ================= */
+
+/* =====================================================
+   COUPLE
+   ===================================================== */
 
 .couple{
     background:#f4e7d8;
@@ -211,22 +298,35 @@ section{
 }
 
 .couple-grid{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    gap:70px;
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:75px;
+
     width:100%;
 }
 
 .person{
     width:100%;
+
     max-width:600px;
+
     text-align:center;
-    background:transparent !important;
-    border:none !important;
-    box-shadow:none !important;
-    padding:0 !important;
-    transition:.5s;
+
+    background:transparent;
+
+    border:none;
+
+    box-shadow:none;
+
+    padding:0;
+
+    transition:
+        transform .7s
+        cubic-bezier(.22,1,.36,1);
 }
 
 .person:hover{
@@ -234,38 +334,59 @@ section{
 }
 
 .person img{
-    width:340px !important;
-    height:auto !important;
+    width:340px;
+
+    height:auto;
+
     object-fit:contain;
-    margin:0 auto 28px !important;
+
+    margin:0 auto 28px;
+
     border-radius:20px;
-    box-shadow:0 18px 40px rgba(75,45,25,.20);
+
+    box-shadow:
+        0 18px 40px
+        rgba(75,45,25,.20);
+
+    transition:
+        transform 1s
+        cubic-bezier(.22,1,.36,1);
 }
 
 .person:hover img{
-    transform:scale(1.03);
+    transform:scale(1.025);
 }
 
 .person h3{
     font-family:'Cormorant Garamond',serif;
+
     font-size:34px;
+
     color:#5b4030;
+
     margin-bottom:3px;
 }
 
 .person .nickname{
     font-style:italic;
+
     margin:5px 0 15px;
+
     color:#8f6b51;
 }
 
 .person p{
     font-size:13px;
+
     line-height:1.9;
+
     color:#5b4030;
 }
 
-/* ================= EVENT ================= */
+
+/* =====================================================
+   EVENT
+   ===================================================== */
 
 .event{
     background:#f7ede3;
@@ -273,50 +394,85 @@ section{
 
 .event-grid{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:25px;
 }
 
 .event-card{
     background:#fffaf5;
+
     padding:35px 25px;
+
     text-align:center;
+
     border-radius:25px;
-    box-shadow:0 8px 25px rgba(100,70,50,.1);
-    transition:.4s;
+
+    box-shadow:
+        0 8px 25px
+        rgba(100,70,50,.1);
+
+    transition:
+        transform .6s
+        cubic-bezier(.22,1,.36,1),
+        box-shadow .6s ease;
 }
 
 .event-card:hover{
     transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(100,70,50,.15);
 }
 
 .event-card h3{
     font-family:'Cormorant Garamond',serif;
+
     font-size:32px;
+
     margin-bottom:15px;
 }
 
 .event-card p{
     font-size:13px;
+
     line-height:1.9;
 }
 
 .maps-btn{
     display:inline-block;
+
     margin-top:20px;
+
     background:#b98b68;
+
     color:white;
+
     padding:11px 22px;
+
     border-radius:25px;
+
     font-size:13px;
-    transition:.3s;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
 .maps-btn:hover{
     transform:scale(1.05);
+
+    box-shadow:
+        0 8px 20px
+        rgba(120,80,50,.2);
 }
 
-/* ================= INVITED ================= */
+
+/* =====================================================
+   INVITED
+   ===================================================== */
 
 .invited{
     background:#f4e7d8;
@@ -325,16 +481,25 @@ section{
 
 .invited-box{
     max-width:650px;
+
     margin:auto;
+
     background:#fffaf5;
+
     padding:30px 25px;
+
     border-radius:25px;
-    box-shadow:0 8px 25px rgba(100,70,50,.1);
+
+    box-shadow:
+        0 8px 25px
+        rgba(100,70,50,.1);
 }
 
 .invited-box p{
     font-size:14px;
+
     line-height:1.9;
+
     margin-bottom:15px;
 }
 
@@ -342,7 +507,10 @@ section{
     margin-bottom:0;
 }
 
-/* ================= LOVE STORY ================= */
+
+/* =====================================================
+   LOVE STORY
+   ===================================================== */
 
 .story{
     background:#f7ede3;
@@ -350,24 +518,35 @@ section{
 
 .story-list{
     max-width:700px;
+
     margin:auto;
+
     position:relative;
 }
 
 .story-list::before{
     content:"";
+
     position:absolute;
+
     left:50%;
+
     top:0;
+
     bottom:0;
+
     width:2px;
+
     background:#c9a98c;
+
     transform:translateX(-50%);
 }
 
 .story-item{
     width:50%;
+
     padding:20px 35px;
+
     position:relative;
 }
 
@@ -381,17 +560,32 @@ section{
 
 .story-item::after{
     content:"♥";
+
     position:absolute;
+
     top:20px;
+
     width:30px;
+
     height:30px;
+
     background:#b98b68;
+
     color:white;
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:12px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(100,60,40,.15);
 }
 
 .story-item:nth-child(odd)::after{
@@ -404,38 +598,59 @@ section{
 
 .story-item h3{
     font-family:'Cormorant Garamond',serif;
+
     font-size:27px;
 }
 
 .story-item p{
     font-size:13px;
+
     line-height:1.8;
+
     margin-top:8px;
 }
 
-/* ================= GALLERY ================= */
+
+/* =====================================================
+   GALLERY
+   ===================================================== */
 
 .gallery{
     text-align:center;
+
     background:#f4e7d8;
 }
 
 .gallery img{
     width:100%;
+
     max-width:700px;
+
     max-height:650px;
+
     object-fit:cover;
+
     margin:auto;
+
     border-radius:30px;
-    box-shadow:0 15px 35px rgba(70,40,20,.18);
-    transition:.8s;
+
+    box-shadow:
+        0 15px 35px
+        rgba(70,40,20,.18);
+
+    transition:
+        transform 1s
+        cubic-bezier(.22,1,.36,1);
 }
 
 .gallery img:hover{
     transform:scale(1.02);
 }
 
-/* ================= RSVP ================= */
+
+/* =====================================================
+   RSVP
+   ===================================================== */
 
 .rsvp{
     background:#f7ede3;
@@ -443,11 +658,18 @@ section{
 
 .form-box{
     max-width:600px;
+
     margin:auto;
+
     background:#fffaf5;
+
     padding:30px;
+
     border-radius:25px;
-    box-shadow:0 8px 25px rgba(100,70,50,.1);
+
+    box-shadow:
+        0 8px 25px
+        rgba(100,70,50,.1);
 }
 
 .form-group{
@@ -456,94 +678,142 @@ section{
 
 .form-group label{
     display:block;
+
     margin-bottom:7px;
+
     font-size:13px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
+
     width:100%;
+
     padding:13px 15px;
+
     border:1px solid #ddc5b1;
+
     border-radius:12px;
+
     background:#fff;
+
     color:#5b4030;
+
     outline:none;
-    font-family:'Poppins',sans-serif;
 }
 
 .form-group textarea{
     min-height:110px;
+
     resize:vertical;
 }
 
 .submit-btn{
     width:100%;
+
     border:0;
+
     padding:14px;
+
     border-radius:25px;
+
     background:#b98b68;
+
     color:white;
-    font-family:'Poppins',sans-serif;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
 .submit-btn:hover{
     transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(100,60,40,.15);
 }
 
-/* ================= GIFT ================= */
+
+/* =====================================================
+   GIFT
+   ===================================================== */
 
 .gift{
     background:#f4e7d8;
+
     text-align:center;
 }
 
 .gift-card{
     max-width:550px;
+
     margin:auto;
+
     background:#fffaf5;
+
     padding:35px 25px;
+
     border-radius:25px;
-    box-shadow:0 8px 25px rgba(100,70,50,.1);
+
+    box-shadow:
+        0 8px 25px
+        rgba(100,70,50,.1);
 }
 
 .bank{
     font-family:'Cormorant Garamond',serif;
+
     font-size:32px;
+
     margin-bottom:10px;
 }
 
 .account{
     font-size:22px;
+
     letter-spacing:2px;
+
     font-weight:600;
+
     margin:15px 0 5px;
 }
 
 .owner{
     font-size:14px;
+
     margin-bottom:20px;
 }
 
 .copy-btn{
     border:0;
+
     background:#b98b68;
+
     color:white;
+
     padding:11px 25px;
+
     border-radius:25px;
+
     cursor:pointer;
 }
 
 .address{
     margin-top:25px;
+
     font-size:13px;
+
     line-height:1.8;
 }
 
-/* ================= WISHES ================= */
+
+/* =====================================================
+   WISHES
+   ===================================================== */
 
 .wishes{
     background:#f7ede3;
@@ -551,118 +821,120 @@ section{
 
 .wish-form{
     max-width:600px;
+
     margin:0 auto 35px;
 }
 
 .wish-list{
     max-width:650px;
+
     margin:auto;
 }
 
 .wish{
     background:#fffaf5;
+
     padding:18px 20px;
+
     border-radius:18px;
+
     margin-bottom:15px;
-    box-shadow:0 5px 15px rgba(100,70,50,.08);
+
+    box-shadow:
+        0 5px 15px
+        rgba(100,70,50,.08);
+
+    animation:
+        wishIn .6s
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 .wish strong{
     display:block;
+
     margin-bottom:5px;
 }
 
 .wish p{
     font-size:13px;
+
     line-height:1.7;
 }
 
-/* ================= FOOTER ================= */
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 footer{
     padding:70px 20px 40px;
+
     background:#5b4030;
+
     color:white;
+
     text-align:center;
 }
 
 footer h2{
     font-family:'Cormorant Garamond',serif;
+
     font-size:40px;
 }
 
 footer p{
     font-size:13px;
+
     margin-top:8px;
 }
 
 .footer-credit{
     margin-top:35px;
+
     padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.2);
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.2);
+
     font-size:12px;
+
     line-height:2;
 }
 
-/* ================= WHATSAPP ================= */
 
-.wa{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    z-index:2000;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    animation:waFloat 2.5s infinite;
-}
-
-/* ================= MUSIC ================= */
-
-.music-btn{
-    position:fixed;
-    left:20px;
-    bottom:20px;
-    width:48px;
-    height:48px;
-    border:0;
-    border-radius:50%;
-    background:#b98b68;
-    color:white;
-    z-index:2000;
-    cursor:pointer;
-    font-size:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
-
-.music-btn.playing{
-    animation:musicPulse 1.2s infinite;
-}
-
-/* ================= PETALS ================= */
+/* =====================================================
+   PETALS / HEARTS
+   ===================================================== */
 
 .petals{
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     overflow:hidden;
+
     z-index:1500;
 }
 
 .petals span{
     position:absolute;
+
     top:-40px;
+
     font-size:18px;
+
     opacity:.7;
-    animation:fall linear infinite;
+
+    animation:
+        fall linear infinite;
 }
+
+
+/* Posisi dan kecepatan hati */
 
 .petals span:nth-child(1){
     left:5%;
@@ -699,87 +971,156 @@ footer p{
     animation-delay:3s;
 }
 
-/* ================= SCROLL ANIMATION ================= */
+
+/* =====================================================
+   SCROLL REVEAL
+   ===================================================== */
 
 .reveal{
     opacity:0;
-    transform:translateY(40px);
-    transition:opacity .9s ease, transform .9s ease;
+
+    transform:
+        translate3d(0,45px,0)
+        scale(.985);
+
+    transition:
+        opacity 1.1s
+        cubic-bezier(.22,1,.36,1),
+
+        transform 1.1s
+        cubic-bezier(.22,1,.36,1);
+
+    will-change:
+        opacity,
+        transform;
 }
 
 .reveal.show{
     opacity:1;
-    transform:translateY(0);
+
+    transform:
+        translate3d(0,0,0)
+        scale(1);
 }
 
-/* ================= KEYFRAMES ================= */
+
+/* =====================================================
+   AUTO SCROLL
+   ===================================================== */
+
+body.auto-scrolling{
+    scroll-behavior:auto;
+}
+
+
+/* =====================================================
+   KEYFRAMES
+   ===================================================== */
 
 @keyframes openingFade{
+
     from{
         opacity:0;
-        transform:translateY(30px) scale(.96);
+
+        transform:
+            translate3d(0,35px,0)
+            scale(.96);
     }
+
     to{
         opacity:1;
-        transform:translateY(0) scale(1);
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
     }
+
 }
 
 @keyframes heroName{
+
     from{
         opacity:0;
-        transform:translateY(30px);
+
+        transform:
+            translate3d(0,45px,0)
+            scale(.96);
     }
+
     to{
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
     }
+
 }
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
-        transform:translateY(20px);
+
+        transform:
+            translate3d(0,25px,0);
     }
+
     to{
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translate3d(0,0,0);
     }
+
 }
 
 @keyframes fall{
+
     0%{
-        transform:translate3d(0,-50px,0) rotate(0deg);
+        transform:
+            translate3d(0,-50px,0)
+            rotate(0deg);
+
         opacity:0;
     }
+
     10%{
         opacity:.8;
     }
+
     100%{
-        transform:translate3d(80px,110vh,0) rotate(360deg);
+        transform:
+            translate3d(80px,110vh,0)
+            rotate(360deg);
+
         opacity:0;
     }
+
 }
 
-@keyframes musicPulse{
-    0%,100%{
-        transform:scale(1);
+@keyframes wishIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translate3d(0,20px,0);
     }
-    50%{
-        transform:scale(1.12);
+
+    to{
+        opacity:1;
+
+        transform:
+            translate3d(0,0,0);
     }
+
 }
 
-@keyframes waFloat{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-6px);
-    }
-}
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media(max-width:700px){
 
@@ -803,14 +1144,16 @@ footer p{
         font-size:36px;
     }
 
-    .couple-grid,
+    .couple-grid{
+        grid-template-columns:1fr;
+    }
+
     .event-grid{
         grid-template-columns:1fr;
     }
 
     .person img{
         width:190px;
-        height:240px;
     }
 
     .story-list::before{
@@ -819,15 +1162,25 @@ footer p{
 
     .story-item,
     .story-item:nth-child(even){
+
         width:100%;
+
         margin-left:0;
-        padding:20px 20px 20px 50px;
+
+        padding:
+            20px
+            20px
+            20px
+            50px;
+
         text-align:left;
     }
 
     .story-item:nth-child(odd)::after,
     .story-item:nth-child(even)::after{
+
         left:0;
+
         right:auto;
     }
 
@@ -835,67 +1188,92 @@ footer p{
         font-size:23px;
     }
 
-    .wa{
-        right:15px;
-        bottom:15px;
-    }
-
-    .music-btn{
-        left:15px;
-        bottom:15px;
-    }
 }
 
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
 @media(prefers-reduced-motion:reduce){
+
     *,
     *::before,
     *::after{
+
         animation-duration:.01ms !important;
+
         animation-iteration-count:1 !important;
-        scroll-behavior:auto !important;
+
         transition-duration:.01ms !important;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= PETAL ANIMATION ================= -->
+
+<!-- =====================================================
+     PETALS
+     ===================================================== -->
 
 <div class="petals" aria-hidden="true">
-    <span>🌸</span>
-    <span>🌸</span>
-    <span>🌸</span>
+
     <span>❤️</span>
     <span>🤍</span>
     <span>❤️</span>
+    <span>🤍</span>
+    <span>❤️</span>
+    <span>🤍</span>
+
 </div>
 
-<!-- ================= OPENING ================= -->
+
+<!-- =====================================================
+     OPENING
+     ===================================================== -->
 
 <div class="opening" id="opening">
 
     <div class="opening-box">
 
-        <small>THE WEDDING OF</small>
+        <small>
+            THE WEDDING OF
+        </small>
 
-        <h1>Ma’mun<br>&amp;<br>Eva</h1>
+        <h1>
+            Ma’mun<br>
+            &amp;<br>
+            Eva
+        </h1>
 
         <p>
             Kepada Bapak/Ibu/Saudara/i<br>
             yang kami hormati
         </p>
 
-        <button class="open-btn" onclick="openInvitation()">
-            ♡ &nbsp; BUKA UNDANGAN &nbsp; ♡
+        <button
+            class="open-btn"
+            onclick="openInvitation()">
+
+            ♡ &nbsp;
+            BUKA UNDANGAN
+            &nbsp; ♡
+
         </button>
 
     </div>
 
 </div>
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 <section class="hero">
 
@@ -906,7 +1284,9 @@ footer p{
         </div>
 
         <h1>
-            Ma’mun<br>&amp;<br>Eva
+            Ma’mun<br>
+            &amp;<br>
+            Eva
         </h1>
 
         <p>
@@ -923,24 +1303,37 @@ footer p{
 
 </section>
 
-<!-- ================= QUOTE ================= -->
+
+<!-- =====================================================
+     QUOTE
+     ===================================================== -->
 
 <section class="quote">
 
     <div class="container reveal">
 
         <div class="section-title">
-            <span>Our Beginning</span>
-            <h2>Dengan Nama Allah</h2>
+
+            <span>
+                Our Beginning
+            </span>
+
+            <h2>
+                Dengan Nama Allah
+            </h2>
+
             <div class="divider"></div>
+
         </div>
 
         <div class="quote-text">
+
             “Dan di antara tanda-tanda kekuasaan-Nya
             ialah Dia menciptakan untukmu pasangan
             dari jenismu sendiri, supaya kamu merasa
             tenteram kepadanya, dan dijadikan-Nya
             di antaramu rasa kasih dan sayang.”
+
         </div>
 
         <div class="quote-source">
@@ -951,57 +1344,100 @@ footer p{
 
 </section>
 
-<!-- ================= COUPLE ================= -->
+
+<!-- =====================================================
+     COUPLE
+     ===================================================== -->
 
 <section class="couple">
 
     <div class="container">
 
         <div class="section-title reveal">
-            <span>The Couple</span>
-            <h2>Mempelai</h2>
+
+            <span>
+                The Couple
+            </span>
+
+            <h2>
+                Mempelai
+            </h2>
+
             <div class="divider"></div>
+
         </div>
+
 
         <div class="couple-grid">
 
+
             <div class="person reveal">
 
-                <img src="laki laki.jpg" alt="Ma’mun Solehudin">
+                <img
+                    src="laki laki.jpg"
+                    alt="Ma’mun Solehudin">
 
-                <h3>Ma’mun Solehudin</h3>
+                <h3>
+                    Ma’mun Solehudin
+                </h3>
 
                 <div class="nickname">
                     Ma’mun
                 </div>
 
                 <p>
+
                     Putra dari<br>
-                    <strong>Bapak Gunawan</strong><br>
+
+                    <strong>
+                        Bapak Gunawan
+                    </strong>
+
+                    <br>
                     &amp;<br>
-                    <strong>Ibu Ati Maryati</strong>
+
+                    <strong>
+                        Ibu Ati Maryati
+                    </strong>
+
                 </p>
 
             </div>
 
+
             <div class="person reveal">
 
-                <img src="wanita.jpg" alt="Eva Nuraeni">
+                <img
+                    src="wanita.jpg"
+                    alt="Eva Nuraeni">
 
-                <h3>Eva Nuraeni</h3>
+                <h3>
+                    Eva Nuraeni
+                </h3>
 
                 <div class="nickname">
                     Neng Eva
                 </div>
 
                 <p>
+
                     Putri dari<br>
-                    <strong>Bapak M Ramdhan</strong><br>
+
+                    <strong>
+                        Bapak M Ramdhan
+                    </strong>
+
+                    <br>
                     &amp;<br>
-                    <strong>Alm. Ibu Siti Nurhayati</strong>
+
+                    <strong>
+                        Alm. Ibu Siti Nurhayati
+                    </strong>
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1009,26 +1445,43 @@ footer p{
 
 </section>
 
-<!-- ================= EVENT ================= -->
+
+<!-- =====================================================
+     EVENT
+     ===================================================== -->
 
 <section class="event">
 
     <div class="container">
 
         <div class="section-title reveal">
-            <span>Save The Date</span>
-            <h2>Waktu &amp; Tempat</h2>
+
+            <span>
+                Save The Date
+            </span>
+
+            <h2>
+                Waktu &amp; Tempat
+            </h2>
+
             <div class="divider"></div>
+
         </div>
+
 
         <div class="event-grid">
 
+
             <div class="event-card reveal">
 
-                <h3>Akad Nikah</h3>
+                <h3>
+                    Akad Nikah
+                </h3>
 
                 <p>
-                    <strong>Sabtu, 13 Maret 2027</strong>
+                    <strong>
+                        Sabtu, 13 Maret 2027
+                    </strong>
                 </p>
 
                 <p>
@@ -1046,17 +1499,26 @@ footer p{
                     class="maps-btn"
                     href="https://maps.app.goo.gl/zBwgrAvMzom1JJzf9?g_st=ac"
                     target="_blank">
+
                     📍 Lihat Lokasi
+
                 </a>
 
             </div>
 
+
             <div class="event-card reveal">
 
-                <h3>Resepsi</h3>
+                <h3>
+                    Resepsi
+                </h3>
 
                 <p>
-                    <strong>Sabtu, 13 Maret 2027</strong>
+
+                    <strong>
+                        Sabtu, 13 Maret 2027
+                    </strong>
+
                 </p>
 
                 <p>
@@ -1074,10 +1536,13 @@ footer p{
                     class="maps-btn"
                     href="https://maps.app.goo.gl/zBwgrAvMzom1JJzf9?g_st=ac"
                     target="_blank">
+
                     📍 Lihat Lokasi
+
                 </a>
 
             </div>
+
 
         </div>
 
@@ -1085,17 +1550,29 @@ footer p{
 
 </section>
 
-<!-- ================= TURUT MENGUNDANG ================= -->
+
+<!-- =====================================================
+     INVITED
+     ===================================================== -->
 
 <section class="invited">
 
     <div class="container">
 
         <div class="section-title reveal">
-            <span>Family</span>
-            <h2>Turut Mengundang</h2>
+
+            <span>
+                Family
+            </span>
+
+            <h2>
+                Turut Mengundang
+            </h2>
+
             <div class="divider"></div>
+
         </div>
+
 
         <div class="invited-box reveal">
 
@@ -1117,23 +1594,38 @@ footer p{
 
 </section>
 
-<!-- ================= LOVE STORY ================= -->
+
+<!-- =====================================================
+     LOVE STORY
+     ===================================================== -->
 
 <section class="story">
 
     <div class="container">
 
         <div class="section-title reveal">
-            <span>Our Story</span>
-            <h2>Kisah Cinta</h2>
+
+            <span>
+                Our Story
+            </span>
+
+            <h2>
+                Kisah Cinta
+            </h2>
+
             <div class="divider"></div>
+
         </div>
+
 
         <div class="story-list">
 
+
             <div class="story-item reveal">
 
-                <h3>Masa SMA</h3>
+                <h3>
+                    Masa SMA
+                </h3>
 
                 <p>
                     Kisah kami berawal sejak masa SMA.
@@ -1143,9 +1635,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Dari Kejauhan</h3>
+                <h3>
+                    Dari Kejauhan
+                </h3>
 
                 <p>
                     Saat itu Eva sudah memiliki pasangan.
@@ -1156,9 +1651,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Berpisah</h3>
+                <h3>
+                    Berpisah
+                </h3>
 
                 <p>
                     Setelah lulus sekolah, komunikasi
@@ -1167,9 +1665,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Bertemu Kembali</h3>
+                <h3>
+                    Bertemu Kembali
+                </h3>
 
                 <p>
                     Pada tahun 2023, kami kembali bertemu
@@ -1179,9 +1680,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Semakin Dekat</h3>
+                <h3>
+                    Semakin Dekat
+                </h3>
 
                 <p>
                     Ma’mun membalas story Facebook Eva.
@@ -1192,9 +1696,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Dua Tahun</h3>
+                <h3>
+                    Dua Tahun
+                </h3>
 
                 <p>
                     Selama kurang lebih 2 tahun kami dekat
@@ -1204,9 +1711,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>26 Desember 2025</h3>
+                <h3>
+                    26 Desember 2025
+                </h3>
 
                 <p>
                     Pada tanggal 26 Desember 2025,
@@ -1216,9 +1726,12 @@ footer p{
 
             </div>
 
+
             <div class="story-item reveal">
 
-                <h3>Menuju Pernikahan</h3>
+                <h3>
+                    Menuju Pernikahan
+                </h3>
 
                 <p>
                     Kini kami bersiap membuka lembaran
@@ -1228,23 +1741,36 @@ footer p{
 
             </div>
 
+
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= GALLERY ================= -->
+
+<!-- =====================================================
+     GALLERY
+     ===================================================== -->
 
 <section class="gallery">
 
     <div class="container">
 
         <div class="section-title reveal">
-            <span>Our Moment</span>
-            <h2>Galeri</h2>
+
+            <span>
+                Our Moment
+            </span>
+
+            <h2>
+                Galeri
+            </h2>
+
             <div class="divider"></div>
+
         </div>
+
 
         <img
             class="reveal"
@@ -1255,7 +1781,10 @@ footer p{
 
 </section>
 
-<!-- ================= RSVP ================= -->
+
+<!-- =====================================================
+     RSVP
+     ===================================================== -->
 
 <section class="rsvp">
 
@@ -1263,9 +1792,13 @@ footer p{
 
         <div class="section-title reveal">
 
-            <span>Confirmation</span>
+            <span>
+                Confirmation
+            </span>
 
-            <h2>RSVP</h2>
+            <h2>
+                RSVP
+            </h2>
 
             <div class="divider"></div>
 
@@ -1275,11 +1808,15 @@ footer p{
 
         </div>
 
+
         <div class="form-box reveal">
+
 
             <div class="form-group">
 
-                <label>Nama</label>
+                <label>
+                    Nama
+                </label>
 
                 <input
                     type="text"
@@ -1288,9 +1825,12 @@ footer p{
 
             </div>
 
+
             <div class="form-group">
 
-                <label>Status Kehadiran</label>
+                <label>
+                    Status Kehadiran
+                </label>
 
                 <select id="rsvpStatus">
 
@@ -1306,15 +1846,19 @@ footer p{
 
             </div>
 
+
             <div class="form-group">
 
-                <label>Pesan</label>
+                <label>
+                    Pesan
+                </label>
 
                 <textarea
                     id="rsvpMessage"
                     placeholder="Tulis pesan atau ucapan"></textarea>
 
             </div>
+
 
             <button
                 class="submit-btn"
@@ -1324,13 +1868,17 @@ footer p{
 
             </button>
 
+
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= GIFT ================= -->
+
+<!-- =====================================================
+     GIFT
+     ===================================================== -->
 
 <section class="gift">
 
@@ -1338,13 +1886,18 @@ footer p{
 
         <div class="section-title reveal">
 
-            <span>Wedding Gift</span>
+            <span>
+                Wedding Gift
+            </span>
 
-            <h2>Hadiah Pernikahan</h2>
+            <h2>
+                Hadiah Pernikahan
+            </h2>
 
             <div class="divider"></div>
 
         </div>
+
 
         <div class="gift-card reveal">
 
@@ -1360,6 +1913,7 @@ footer p{
                 a.n. EVA NURAENI
             </div>
 
+
             <button
                 class="copy-btn"
                 onclick="copyRekening()">
@@ -1368,9 +1922,12 @@ footer p{
 
             </button>
 
+
             <div class="address">
 
-                <strong>Alamat Pengiriman Hadiah</strong>
+                <strong>
+                    Alamat Pengiriman Hadiah
+                </strong>
 
                 <br><br>
 
@@ -1398,7 +1955,10 @@ footer p{
 
 </section>
 
-<!-- ================= WISHES ================= -->
+
+<!-- =====================================================
+     WISHES
+     ===================================================== -->
 
 <section class="wishes">
 
@@ -1406,19 +1966,26 @@ footer p{
 
         <div class="section-title reveal">
 
-            <span>Guest Book</span>
+            <span>
+                Guest Book
+            </span>
 
-            <h2>Ucapan &amp; Doa</h2>
+            <h2>
+                Ucapan &amp; Doa
+            </h2>
 
             <div class="divider"></div>
 
         </div>
 
+
         <div class="wish-form reveal">
 
             <div class="form-group">
 
-                <label>Nama</label>
+                <label>
+                    Nama
+                </label>
 
                 <input
                     type="text"
@@ -1427,15 +1994,19 @@ footer p{
 
             </div>
 
+
             <div class="form-group">
 
-                <label>Ucapan &amp; Doa</label>
+                <label>
+                    Ucapan &amp; Doa
+                </label>
 
                 <textarea
                     id="wishMessage"
                     placeholder="Tulis ucapan dan doa..."></textarea>
 
             </div>
+
 
             <button
                 class="submit-btn"
@@ -1447,6 +2018,7 @@ footer p{
 
         </div>
 
+
         <div
             class="wish-list"
             id="wishList">
@@ -1457,7 +2029,10 @@ footer p{
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
@@ -1477,6 +2052,7 @@ footer p{
         Made with ❤️
     </p>
 
+
     <div class="footer-credit">
 
         By Abdul R Official<br>
@@ -1485,6 +2061,11 @@ footer p{
     </div>
 
 </footer>
+
+
+<!-- =====================================================
+     MUSIC
+     ===================================================== -->
 
 <audio
     id="music"
@@ -1497,190 +2078,598 @@ footer p{
 
 </audio>
 
+
 <script>
 
-/* ================= MUSIC ================= */
+/* =====================================================
+   MUSIC
+   ===================================================== */
 
-const music = document.getElementById("music");
-const musicBtn = document.getElementById("musicBtn");
+const music =
+    document.getElementById("music");
+
+
+/* =====================================================
+   AUTO SCROLL VARIABLES
+   ===================================================== */
+
+let autoScroll = false;
+
+let scrollAnimation = null;
+
+let lastTime = 0;
+
+
+/* =====================================================
+   BUKA UNDANGAN
+   ===================================================== */
 
 function openInvitation(){
 
-    document.getElementById("opening")
-        .classList.add("hide");
+    const opening =
+        document.getElementById("opening");
 
-    music.play()
-        .then(() => {
 
-            musicBtn.classList.add("playing");
+    /*
+       Tutup halaman opening
+    */
 
-        })
-        .catch(() => {
+    opening.classList.add("hide");
 
-            console.log("Musik memerlukan interaksi pengguna.");
 
-        });
+    /*
+       Aktifkan mode auto-scroll
+    */
+
+    document.body.classList.add("auto-scrolling");
+
+
+    /*
+       Putar musik setelah tombol
+       ditekan oleh pengguna.
+    */
+
+    if(music){
+
+        music.play().catch(() => {});
+
+    }
+
+
+    /*
+       Tunggu cover mulai menghilang,
+       kemudian mulai scroll.
+    */
+
+    setTimeout(function(){
+
+        startAutoScroll();
+
+    },500);
 
 }
 
-function toggleMusic(){
 
-    if(music.paused){
+/* =====================================================
+   START AUTO SCROLL
+   ===================================================== */
 
-        music.play();
+function startAutoScroll(){
 
-        musicBtn.classList.add("playing");
+    if(autoScroll){
 
-    }else{
+        return;
 
-        music.pause();
+    }
 
-        musicBtn.classList.remove("playing");
+
+    autoScroll = true;
+
+    lastTime =
+        performance.now();
+
+
+    scrollAnimation =
+        requestAnimationFrame(
+            autoScrollFrame
+        );
+
+}
+
+
+/* =====================================================
+   SMOOTH AUTO SCROLL
+   ===================================================== */
+
+function autoScrollFrame(timestamp){
+
+    if(!autoScroll){
+
+        return;
+
+    }
+
+
+    /*
+       Hitung waktu antar frame.
+       Ini membuat kecepatan lebih
+       stabil pada HP Android.
+    */
+
+    const deltaTime =
+        Math.min(
+            (timestamp - lastTime) / 1000,
+            0.05
+        );
+
+
+    lastTime =
+        timestamp;
+
+
+    /*
+       KECEPATAN AUTO SCROLL
+
+       1.5 = nyaman untuk membaca.
+
+       Nilainya menggunakan
+       pixel per detik.
+    */
+
+    const speed =
+        90;
+
+
+    window.scrollBy(
+        0,
+        speed * deltaTime
+    );
+
+
+    /*
+       Cek bagian paling bawah.
+    */
+
+    const currentPosition =
+        window.scrollY +
+        window.innerHeight;
+
+
+    const pageHeight =
+        document.documentElement.scrollHeight;
+
+
+    if(
+        currentPosition >=
+        pageHeight - 2
+    ){
+
+        stopAutoScroll();
+
+        return;
+
+    }
+
+
+    scrollAnimation =
+        requestAnimationFrame(
+            autoScrollFrame
+        );
+
+}
+
+
+/* =====================================================
+   STOP AUTO SCROLL
+   ===================================================== */
+
+function stopAutoScroll(){
+
+    autoScroll = false;
+
+    lastTime = 0;
+
+
+    if(scrollAnimation){
+
+        cancelAnimationFrame(
+            scrollAnimation
+        );
+
+        scrollAnimation = null;
 
     }
 
 }
 
-/* ================= COPY REKENING ================= */
+
+/* =====================================================
+   DETEKSI SWIPE MANUAL
+   ===================================================== */
+
+let touchStartY = 0;
+
+
+window.addEventListener(
+    "touchstart",
+    function(event){
+
+        if(
+            event.touches &&
+            event.touches.length
+        ){
+
+            touchStartY =
+                event.touches[0].clientY;
+
+        }
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+window.addEventListener(
+    "touchmove",
+    function(event){
+
+        if(!autoScroll){
+
+            return;
+
+        }
+
+
+        if(
+            event.touches &&
+            event.touches.length
+        ){
+
+            const currentY =
+                event.touches[0].clientY;
+
+
+            const movement =
+                Math.abs(
+                    currentY -
+                    touchStartY
+                );
+
+
+            /*
+               Hentikan hanya jika
+               benar-benar melakukan swipe.
+            */
+
+            if(movement > 8){
+
+                stopAutoScroll();
+
+            }
+
+        }
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+window.addEventListener(
+    "wheel",
+    function(){
+
+        if(autoScroll){
+
+            stopAutoScroll();
+
+        }
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+/* =====================================================
+   COPY REKENING
+   ===================================================== */
 
 function copyRekening(){
 
-    const rekening = "1560020964898";
+    const rekening =
+        "1560020964898";
 
-    navigator.clipboard.writeText(rekening)
-        .then(() => {
 
-            alert("Nomor rekening berhasil disalin.");
+    if(
+        navigator.clipboard &&
+        navigator.clipboard.writeText
+    ){
 
-        })
-        .catch(() => {
+        navigator.clipboard
+            .writeText(rekening)
 
-            alert("Nomor rekening: " + rekening);
+            .then(function(){
 
-        });
+                alert(
+                    "Nomor rekening berhasil disalin."
+                );
+
+            })
+
+            .catch(function(){
+
+                alert(
+                    "Nomor rekening: " +
+                    rekening
+                );
+
+            });
+
+    }else{
+
+        alert(
+            "Nomor rekening: " +
+            rekening
+        );
+
+    }
 
 }
 
-/* ================= RSVP ================= */
+
+/* =====================================================
+   RSVP
+   ===================================================== */
 
 function sendRSVP(){
 
     const name =
-        document.getElementById("rsvpName").value.trim();
+        document
+        .getElementById("rsvpName")
+        .value
+        .trim();
+
 
     const status =
-        document.getElementById("rsvpStatus").value;
+        document
+        .getElementById("rsvpStatus")
+        .value;
+
 
     const message =
-        document.getElementById("rsvpMessage").value.trim();
+        document
+        .getElementById("rsvpMessage")
+        .value
+        .trim();
+
 
     if(!name){
 
-        alert("Silakan masukkan nama terlebih dahulu.");
+        alert(
+            "Silakan masukkan nama terlebih dahulu."
+        );
 
         return;
 
     }
 
+
     const text =
-        "Halo, saya ingin mengonfirmasi kehadiran untuk pernikahan Ma’mun & Eva.%0A%0A" +
-        "Nama: " + encodeURIComponent(name) +
-        "%0AStatus: " + encodeURIComponent(status) +
-        "%0APesan: " + encodeURIComponent(message);
+
+        "Halo, saya ingin mengonfirmasi " +
+        "kehadiran untuk pernikahan Ma’mun & Eva." +
+
+        "%0A%0A" +
+
+        "Nama: " +
+        encodeURIComponent(name) +
+
+        "%0AStatus: " +
+        encodeURIComponent(status) +
+
+        "%0APesan: " +
+        encodeURIComponent(message);
+
 
     window.open(
-        "https://wa.me/6281320774586?text=" + text,
+
+        "https://wa.me/6281320774586?text=" +
+        text,
+
         "_blank"
+
     );
 
 }
 
-/* ================= WISHES ================= */
+
+/* =====================================================
+   ESCAPE HTML
+   ===================================================== */
 
 function escapeHTML(str){
 
     return str
+
         .replace(/&/g,"&amp;")
+
         .replace(/</g,"&lt;")
+
         .replace(/>/g,"&gt;")
+
         .replace(/"/g,"&quot;")
+
         .replace(/'/g,"&#039;");
 
 }
 
+
+/* =====================================================
+   WISHES
+   ===================================================== */
+
 function addWish(){
 
     const name =
-        document.getElementById("wishName").value.trim();
+        document
+        .getElementById("wishName")
+        .value
+        .trim();
+
 
     const message =
-        document.getElementById("wishMessage").value.trim();
+        document
+        .getElementById("wishMessage")
+        .value
+        .trim();
+
 
     if(!name || !message){
 
-        alert("Nama dan ucapan harus diisi.");
+        alert(
+            "Nama dan ucapan harus diisi."
+        );
 
         return;
 
     }
 
+
     const wish =
         document.createElement("div");
 
-    wish.className = "wish";
+
+    wish.className =
+        "wish";
+
 
     wish.innerHTML =
+
         "<strong>" +
+
         escapeHTML(name) +
+
         "</strong>" +
+
         "<p>" +
+
         escapeHTML(message) +
+
         "</p>";
+
 
     document
         .getElementById("wishList")
         .prepend(wish);
 
-    document.getElementById("wishName").value = "";
-    document.getElementById("wishMessage").value = "";
+
+    document
+        .getElementById("wishName")
+        .value = "";
+
+
+    document
+        .getElementById("wishMessage")
+        .value = "";
 
 }
 
-/* ================= SCROLL REVEAL ================= */
+
+/* =====================================================
+   SCROLL REVEAL
+   ===================================================== */
 
 const reveals =
     document.querySelectorAll(".reveal");
+
 
 const observer =
     new IntersectionObserver(
 
         function(entries){
 
-            entries.forEach(function(entry){
+            entries.forEach(
+                function(entry){
 
-                if(entry.isIntersecting){
+                    if(
+                        entry.isIntersecting
+                    ){
 
-                    entry.target.classList.add("show");
+                        /*
+                           Beri sedikit delay
+                           berdasarkan posisi elemen
+                           agar terlihat bertahap.
+                        */
 
-                    observer.unobserve(entry.target);
+                        const delay =
+                            entry.target
+                            .classList
+                            .contains("person")
+                            ? 120
+                            : 0;
+
+
+                        setTimeout(
+                            function(){
+
+                                entry.target
+                                    .classList
+                                    .add("show");
+
+                            },
+                            delay
+                        );
+
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
 
         {
-            threshold:0.12
+            threshold:0.12,
+
+            rootMargin:
+                "0px 0px -8% 0px"
         }
 
     );
 
-reveals.forEach(function(element){
 
-    observer.observe(element);
+reveals.forEach(
+    function(element){
 
-});
+        observer.observe(element);
+
+    }
+);
+
+
+/* =====================================================
+   HERO LANGSUNG AKTIF
+   ===================================================== */
+
+document
+    .querySelectorAll(".hero-content")
+    .forEach(function(){
+
+        /*
+           Hero memiliki animasi CSS sendiri.
+        */
+
+    });
+
 
 </script>
 
